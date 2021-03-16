@@ -17,6 +17,7 @@ func NewInstallCmd(pctx *kumactl_cmd.RootContext) *cobra.Command {
 	cmd.AddCommand(newInstallCrdsCmd(&pctx.InstallCRDContext))
 	cmd.AddCommand(newInstallMetrics(pctx))
 	cmd.AddCommand(newInstallTracing())
+	cmd.AddCommand(newInstallKIC())
 	cmd.AddCommand(newInstallDNS())
 	cmd.AddCommand(newInstallLogging())
 	cmd.AddCommand(newInstallTransparentProxy())
