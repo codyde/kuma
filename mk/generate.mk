@@ -53,6 +53,11 @@ generate/kumactl/install/k8s/tracing:
 	GOFLAGS='${GOFLAGS}' go generate ./app/kumactl/pkg/install/k8s/tracing/...
 
 # Notice that this command is not include into `make generate` by intention (since generated code differs between dev host and ci server)
+.PHONY: generate/kumactl/install/k8s/kongingress
+generate/kumactl/install/k8s/kongingress:
+	GOFLAGS='${GOFLAGS}' go generate ./app/kumactl/pkg/install/k8s/kongingress/...
+
+# Notice that this command is not include into `make generate` by intention (since generated code differs between dev host and ci server)
 .PHONY: generate/kumactl/install/k8s/logging
 generate/kumactl/install/k8s/logging:
 	GOFLAGS='${GOFLAGS}' go generate ./app/kumactl/pkg/install/k8s/logging/...
